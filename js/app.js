@@ -71,6 +71,16 @@ var temperatureElement = $("#temperatureBox");
 var conditionElement = $("#conditionBox");
 var windElement = $("#windBox"); 
 
-
+$.ajax({
+  url: "http://api.openweathermap.org/data/2.5/weather?lat=" + pos.lat + "&lon=" + pos.lng + "&units=metric&APPID=c81967e1047260a284bc9fb6dd167158",
+  method: "get",
+  dataType: "json",
+  success: function (data) {
+    temperatureElement.html('Temperature: ' + data.main.temp + '<br/>');
+    conditionElement.html('Condition: ' + data.weather[0].main + '<br/>');
+    windElement.html('Wind: ' + data.wind.speed + '<br/>');
+    console.log(data);
+  }
+})
 })
 });

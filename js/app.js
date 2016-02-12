@@ -169,10 +169,9 @@ $.ajax({
   method: "get",
   dataType: "json",
   success: function (data) {
-    temperatureElement.html('Temperature: ' + data.main.temp + '&#8451' + '<br/>');
-    conditionElement.html('Condition: ' + data.weather[0].main + '<br/>');
-    windElement.html('Wind: ' + data.wind.speed + ' m/s' + '<br/>');
-    console.log(data);
+    temperatureElement.html('Temperature: ' + '<br>' + '<strong class="wB">' + data.main.temp + '&#8451' + '</strong>' + '<br/>');
+    conditionElement.html('Condition: ' + '<br>' + '<strong class="wB">' + data.weather[0].main + '</strong>' + '<br/>');
+    windElement.html('Wind: ' + '<br>' + '<strong class="wB">' + data.wind.speed + ' m/s' + '</strong>' + '<br/>');
   }
 })
 })

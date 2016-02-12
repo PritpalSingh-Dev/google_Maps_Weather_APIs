@@ -4,6 +4,8 @@ html, body {
   padding: 0;
 }
 
+/*******Map********/
+
 #map {
   height: 75%;
   width: 960px;
@@ -12,8 +14,6 @@ html, body {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-
-/*******Map********/
 
 @media screen and (max-width: 992px){
   #map {
@@ -36,9 +36,9 @@ html, body {
     border-top-right-radius: 15px;
   }
 }
-/*******Map********/
 
 /*******Row********/
+
 .row {
   width: 960px;
   margin: auto;
@@ -58,16 +58,18 @@ html, body {
   }
 }
 
-/*******Row********/
-
-/*******Weather Boxes********/
+/*******Weather and Video Boxes********/
 
 #temperatureBox, #conditionBox, #windBox {
   font-size: 25px;
   padding: 20px;
   text-align: center;
-  color: #6C9F43;
+  color: #0089EC;
   height: 150px;
+}
+
+strong.wB {
+  font-size: 50px;
 }
 
 .box {
@@ -107,12 +109,6 @@ div#conditionBox {
   }
   }
 
- /* @media screen and (max-width: 992px){
-    div#conditionBox {
-      border-right: 1px solid #0089EC;
-    }
-  }*/
-
 button#btnGetWeather {
   width: 100%;
       background: #0089EC;
@@ -127,7 +123,6 @@ button#btnGetWeather {
     box-sizing: border-box;
      padding: 0 0rem; 
 }
-/*******Weather Boxes********/
 
 /*******Navbar********/
 
@@ -166,8 +161,22 @@ width: 960px;
     margin: auto;
   }
 }
-/*******Navbar********/
 
+.side-nav a {
+    color: #0089EC;
+    }
+
+    .side-nav li:hover {
+      border-top: 1px solid #0089EC;
+      border-bottom: 1px solid #0089EC;
+      background: white;
+    }
+
+    .side-nav a:hover {
+      background: white;
+    }
+
+/*******Navbar********/
 
 
 

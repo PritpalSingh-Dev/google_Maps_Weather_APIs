@@ -68,7 +68,8 @@ This application is powered by Google Maps API and Open Weather Map API. It dete
        - Once the other videos have stopped playing, the video that has been selected by the user can be fired to play through a function called event.target.playVideo();
 - However, after unsuccessful attempts, I discovered a solution online on Stackoverflow and on JSFiddle. According to the source, this would be a solution: 
 
-```<!DOCTYPE html>
+```
+<!DOCTYPE html>
 <html>
     
     <head>
@@ -98,7 +99,9 @@ This application is powered by Google Maps API and Open Weather Map API. It dete
 </html>
 
 ```
+
 - The following JavaScript functions would have fulfilled the criteria for this task.
+
 
 ```
 players = new Array();
@@ -131,6 +134,7 @@ function onPlayerStateChange(event) {
         }
     }
 }
+
 ```
 
 - However, I resisted to incorporate this solution into my code as I would not have come on to this solution through my own coding. But I do understand that the ```getVideoURL``` function determines whether a video is playing or not.

@@ -156,8 +156,10 @@ $( document ).ready(function(){
 
 $(".button-collapse").sideNav();
 
+$(".show").hide();
 $('#btnGetWeather').click(function(){
-
+  $(".show").toggle();
+ 
 var temperatureElement = $("#temperatureBox");
 var conditionElement = $("#conditionBox");
 var windElement = $("#windBox"); 
@@ -167,9 +169,9 @@ $.ajax({
   method: "get",
   dataType: "json",
   success: function (data) {
-    temperatureElement.html('Temperature: ' + data.main.temp + '<br/>').addClass("animated bounceIn");
-    conditionElement.html('Condition: ' + data.weather[0].main + '<br/>').addClass("animated bounceIn");
-    windElement.html('Wind: ' + data.wind.speed + '<br/>').addClass("animated bounceIn");
+    temperatureElement.html('Temperature: ' + data.main.temp + '&#8451' + '<br/>');
+    conditionElement.html('Condition: ' + data.weather[0].main + '<br/>');
+    windElement.html('Wind: ' + data.wind.speed + ' m/s' + '<br/>');
     console.log(data);
   }
 })

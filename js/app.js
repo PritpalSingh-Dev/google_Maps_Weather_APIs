@@ -60,3 +60,9 @@ function toggleBounce() {
     marker.setAnimation(google.maps.Animation.BOUNCE);
   }
 }
+
+$( document ).ready(function(){ 
+
+$(".button-collapse").sideNav();
+
+}

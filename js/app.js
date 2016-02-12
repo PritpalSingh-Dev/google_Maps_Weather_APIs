@@ -23,4 +23,20 @@ function initMap() {
          lat : position.coords.latitude,
          lng : position.coords.longitude
        };
+
+       var marker = new google.maps.Marker({
+           position: pos,
+           map: map,
+           draggable: true,
+           animation: google.maps.Animation.DROP,
+         });
+
+         map.setCenter(pos);
+       }, function() {
+         handleLocationError(true, marker, map.getCenter());
+       });
+      } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, marker, map.getCenter());
+      }
   }

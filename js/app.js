@@ -24,35 +24,39 @@ function initMap() {
          lng : position.coords.longitude
        };
 
-       var marker = new google.maps.Marker({
-           position: pos,
-           map: map,
-           draggable: true,
-           animation: google.maps.Animation.DROP,
-         });
-       marker.addListener('click', toggleBounce);
+       console.log(pos.lat);
+       console.log(pos.lng);
 
-         map.setCenter(pos);
-       }, function() {
-         handleLocationError(true, marker, map.getCenter());
-       });
-      } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, marker, map.getCenter());
-      }
-  }
+      var marker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+        });
+      marker.addListener('click', toggleBounce);
 
-  function handleLocationError(browserHasGeolocation, marker, pos) {
-    marker.setPosition(pos);
-    marker.setContent(browserHasGeolocation ?
-                          'Error: The Geolocation service failed.' :
-                          'Error: Your browser doesn\'t support geolocation.');
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, marker, map.getCenter());
+    });
+    
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, marker, map.getCenter());
   }
+}
 
-  function toggleBounce() {
-    if (marker.getAnimation() !== null) {
-      marker.setAnimation(null);
-    } else {
-      marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
+function handleLocationError(browserHasGeolocation, marker, pos) {
+  marker.setPosition(pos);
+  marker.setContent(browserHasGeolocation ?
+                        'Error: The Geolocation service failed.' :
+                        'Error: Your browser doesn\'t support geolocation.');
+}
+
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
   }
+}

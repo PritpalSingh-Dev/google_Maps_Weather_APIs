@@ -51,3 +51,10 @@ html, body {
 .box {
   border: 1px solid black;
 }
+
+button#btnGetWeather {
+  width: 100%;
+  background: #94BBFD;
+  border: none;
+  padding: 20px;
+}

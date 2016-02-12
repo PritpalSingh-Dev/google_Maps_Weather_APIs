@@ -65,4 +65,12 @@ $( document ).ready(function(){
 
 $(".button-collapse").sideNav();
 
-}
+$('#btnGetWeather').click(function(){
+
+var temperatureElement = $("#temperatureBox");
+var conditionElement = $("#conditionBox");
+var windElement = $("#windBox"); 
+
+
+})
+});

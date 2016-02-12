@@ -67,18 +67,50 @@ html, body {
   padding: 20px;
   text-align: center;
   color: #6C9F43;
+  height: 150px;
 }
 
 .box {
   border: 1px solid #0089EC;
 }
 
-
-
-div#conditionBox {
+div#conditionBox, #player2 {
   border-left: none;
       border-right: none;
 }
+
+#player, #player2, #player3 {
+  border-top: none;
+}
+
+@media screen and (max-width: 600px){
+div#conditionBox {
+  border-left: 1px solid #0089EC;
+      border-right: 1px solid #0089EC;
+}
+}
+
+@media screen and (max-width: 992px){
+  #temperatureBox {
+    border-bottom: none;
+  } 
+  div#conditionBox {
+    border-right: 1px solid #0089EC;
+  }
+  #player {
+    border-left: none;
+    border-bottom: none;
+  }
+  #player3 {
+    border-left:none;
+  }
+  }
+
+ /* @media screen and (max-width: 992px){
+    div#conditionBox {
+      border-right: 1px solid #0089EC;
+    }
+  }*/
 
 button#btnGetWeather {
   width: 100%;
@@ -87,6 +119,12 @@ button#btnGetWeather {
       padding: 20px;
       color: white;
       font-size: 30px;
+}
+
+.row .col {
+    float: left;
+    box-sizing: border-box;
+     padding: 0 0rem; 
 }
 /*******Weather Boxes********/
 
@@ -128,3 +166,7 @@ width: 960px;
   }
 }
 /*******Navbar********/
+
+
+
+

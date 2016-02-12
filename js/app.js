@@ -1,3 +1,5 @@
+//////////////////Google Maps API//////////////////////
+
 function detectBrowser() {
   var useragent = navigator.userAgent;
   var mapdiv = document.getElementById("map");
@@ -60,6 +62,95 @@ function toggleBounce() {
     marker.setAnimation(google.maps.Animation.BOUNCE);
   }
 }
+
+/////////////////////iframe API/////////////////////////
+
+//iframe API
+// 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      var player2;
+      var player3;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          videoId: 'DSM2za9pVRo',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+        player2 = new YT.Player('player2', {
+             height: '100%',
+             width: '100%',
+             videoId: '3VI43wA1UrU',
+             events: {
+               'onReady': onPlayerReady,
+               'onStateChange': onPlayerStateChange
+             }
+           });
+        player3 = new YT.Player('player3', {
+             height: '100%',
+             width: '100%',
+             videoId: 'on4DRTUvst0',
+             events: {
+               'onReady': onPlayerReady,
+               'onStateChange': onPlayerStateChange
+             }
+           });
+      }
+     
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        // event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      // var done = false;
+      // function onPlayerStateChange(event) {
+      //   if (event.data == YT.PlayerState.PLAYING && !done)  {
+      //     setTimeout(stopVideo, 6000);
+      //     done = true;
+      //   }
+      // }
+      // function stopVideo() {
+      //   player.stopVideo();
+      // }
+      var done = false;
+      var myPlayerState;
+            function onPlayerStateChange(event) {
+              if (event.data == YT.PlayerState.PLAYING && !done) {
+              done = true;
+              }
+              myPlayerState = event.data;
+            }
+
+      if (myPlayerState == 1){
+        player.pauseVideo()
+      }
+
+      //iframe API
+    
+
+      //Thought Process
+      //1. User clicks on first video
+      //2. Listen to this event by adding an event listener
+      //3. Upon listening to this event, fire a funtion that checks whether any of the three videos are playing e.g. current video attribute?
+      //4. If the above condition is true (YT.PlayerState.PLAYING === 1) then call the player.stopVideo() or player.pauseVideo() functions
+      //5. Once the other videos have stopped playing, the video that has been selected by the user can be fired to play through a function called event.target.playVideo();
+
+
+//jQuery for Materialize.css and Open Weather Map API//
 
 $( document ).ready(function(){ 
 

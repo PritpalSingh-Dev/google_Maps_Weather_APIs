@@ -19,3 +19,12 @@ html, body {
     margin-top: 50px;
   }
 }
+
+@media screen and (max-width: 600px){
+  #map {
+    height: 50%;
+    width: 100%;
+    margin: auto;
+    margin-top: 25px;
+  }
+}

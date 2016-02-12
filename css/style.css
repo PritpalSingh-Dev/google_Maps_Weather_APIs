@@ -155,7 +155,7 @@ nav {
 
 @media screen and (max-width: 600px){
 .nav-bar-logo {
-      width: 100px;
+      width: 75px;
       float:right;
 }
 }

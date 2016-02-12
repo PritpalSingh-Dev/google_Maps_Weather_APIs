@@ -28,3 +28,8 @@ html, body {
     margin-top: 25px;
   }
 }
+
+.row {
+  width: 960px;
+  margin: auto;
+}

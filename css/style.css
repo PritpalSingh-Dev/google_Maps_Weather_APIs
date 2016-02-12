@@ -33,3 +33,17 @@ html, body {
   width: 960px;
   margin: auto;
 }
+
+@media screen and (max-width: 992px){
+  .row {
+    width: 600px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .row {
+    width: 300px;
+    margin: auto;
+  }
+}

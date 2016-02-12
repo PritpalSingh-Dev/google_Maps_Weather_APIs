@@ -15,8 +15,8 @@ function detectBrowser() {
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 51.542065, lng: -0.128403},
-    zoom: 10
+    center: {lat: 50.066318, lng: -5.700912},
+    zoom: 12
   });
 
   if (navigator.geolocation) {

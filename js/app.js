@@ -16,4 +16,11 @@ function initMap() {
     center: {lat: 51.542065, lng: -0.128403},
     zoom: 10
   });
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+       pos = {
+         lat : position.coords.latitude,
+         lng : position.coords.longitude
+       };
   }

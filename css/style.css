@@ -53,7 +53,7 @@ html, body {
 
 @media screen and (max-width: 600px){
   .row {
-    width: 300px;
+    width: 100%;
     margin: auto;
   }
 }
@@ -91,6 +91,13 @@ div#conditionBox, #player2 {
 div#conditionBox {
   border-left: 1px solid #0089EC;
       border-right: 1px solid #0089EC;
+      border-top: 1px solid #0089EC;
+}
+#windBox {
+  border-top: none;
+}
+#player2 {
+  border-right: 1px solid #0089EC;
 }
 }
 
@@ -177,7 +184,12 @@ width: 960px;
       background: white;
     }
 
-/*******Navbar********/
+/*******Footer********/
+
+footer.page-footer {
+    background-color: #0089EC;
+    margin-top: 100px;
+  }
 
 
 

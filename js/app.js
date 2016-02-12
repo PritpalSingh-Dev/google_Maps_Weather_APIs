@@ -30,6 +30,7 @@ function initMap() {
            draggable: true,
            animation: google.maps.Animation.DROP,
          });
+       marker.addListener('click', toggleBounce);
 
          map.setCenter(pos);
        }, function() {

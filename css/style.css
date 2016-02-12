@@ -55,12 +55,32 @@ html, body {
 }
 
 .box {
-  border: 1px solid black;
+  border: 1px solid #0089EC;
 }
 
 button#btnGetWeather {
   width: 100%;
-  background: #94BBFD;
-  border: none;
-  padding: 20px;
+      background: #0089EC;
+      border: none;
+      padding: 20px;
+      color: white;
+      font-size: 30px;
+}
+
+.z-depth-1, 
+nav, 
+.card-panel, 
+.card, 
+.toast, 
+.btn, 
+.btn-large, 
+.btn-floating, 
+.dropdown-content, 
+.collapsible, 
+.side-nav {
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0),0 0px 0px 0 rgba(0,0,0,0); 
+}
+
+nav {
+  background-color: #0089EC;
 }

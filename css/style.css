@@ -5,11 +5,15 @@ html, body {
 }
 
 #map {
-  height: 50%;
+  height: 75%;
   width: 960px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 40px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
+
+/*******Map********/
 
 @media screen and (max-width: 992px){
   #map {
@@ -17,6 +21,8 @@ html, body {
     width: 600px;
     margin: auto;
     margin-top: 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 }
 
@@ -26,9 +32,13 @@ html, body {
     width: 100%;
     margin: auto;
     margin-top: 25px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 }
+/*******Map********/
 
+/*******Row********/
 .row {
   width: 960px;
   margin: auto;
@@ -48,6 +58,10 @@ html, body {
   }
 }
 
+/*******Row********/
+
+/*******Weather Boxes********/
+
 #temperatureBox, #conditionBox, #windBox {
   font-size: 25px;
   padding: 20px;
@@ -58,6 +72,13 @@ html, body {
   border: 1px solid #0089EC;
 }
 
+
+
+div#conditionBox {
+  border-left: none;
+      border-right: none;
+}
+
 button#btnGetWeather {
   width: 100%;
       background: #0089EC;
@@ -66,16 +87,12 @@ button#btnGetWeather {
       color: white;
       font-size: 30px;
 }
+/*******Weather Boxes********/
+
+/*******Navbar********/
 
 .z-depth-1, 
-nav, 
-.card-panel, 
-.card, 
-.toast, 
-.btn, 
-.btn-large, 
-.btn-floating, 
-.dropdown-content, 
+nav,  
 .collapsible, 
 .side-nav {
     box-shadow: 0 0px 0px 0 rgba(0,0,0,0),0 0px 0px 0 rgba(0,0,0,0); 
@@ -84,3 +101,29 @@ nav,
 nav {
   background-color: #0089EC;
 }
+
+.nav-bar-logo {
+      width: 100px;
+}
+
+@media screen and (max-width: 992px){
+.nav-bar-logo {
+      width: 100px;
+      float:right;
+}
+}
+
+@media screen and (max-width: 600px){
+.nav-bar-logo {
+      width: 100px;
+      float:right;
+}
+}
+
+@media screen and (min-width: 993px) {
+  .nav-wrapper {
+width: 960px;
+    margin: auto;
+  }
+}
+/*******Navbar********/
